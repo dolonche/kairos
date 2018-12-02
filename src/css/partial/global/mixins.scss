@@ -20,8 +20,18 @@ $text-color: #000000;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@mixin container {
+%container {
 	width: 1200px;
+	margin: 0 auto;
+  @media #{$tablet-widths} {
+		width: 768px;
+	}
+  @media #{$mobile-widths} {
+		width: 320px;
+	}
+}
+%container-l {
+	max-width: 1920px;
 	margin: 0 auto;
   @media #{$tablet-widths} {
 		width: 768px;

@@ -1,0 +1,19 @@
+.screen {
+  width: 100%;
+  height: calc(100vh - 89px);
+  background-image: url(../img/screen.jpeg);
+  background-size: cover;
+  filter: grayscale(80%);
+//  animation: hue linear 5s infinite;
+}
+
+//@keyframes hue {
+//  0%,
+//  100% {
+//    filter: hue-rotate(0)
+//  }
+//
+//  50% {
+//    filter: hue-rotate(60deg)
+//  }
+//}

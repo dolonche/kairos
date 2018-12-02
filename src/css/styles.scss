@@ -1,5 +1,12 @@
 @import 'partial/global/normalize';
 @import 'partial/global/fonts';
+@import 'partial/blocks/page';
 @import 'partial/global/variable';
 @import 'partial/global/mixins';
-@import 'partial/blocks/heade';
+@import 'partial/blocks/page-header';
+@import 'partial/blocks/screen';
+@import 'partial/blocks/overlay';
+@import 'partial/blocks/language';
+@import 'partial/blocks/main-nav';
+@import 'partial/blocks/content';
+@import 'partial/blocks/page-footer';

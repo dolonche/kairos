@@ -1,0 +1,23 @@
+  .language {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 300;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s all;
+    a {
+      text-decoration: none;
+      color: #fff;
+      margin-left: 5px;
+      margin-right: 5px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    &--open {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
