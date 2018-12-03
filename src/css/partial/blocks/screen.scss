@@ -1,10 +1,47 @@
 .screen {
+  &__wrapper {}
   width: 100%;
-  height: calc(100vh - 89px);
-  background-image: url(../img/screen.jpeg);
+  height: calc(100vh - 85px);
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/screen.jpg);
   background-size: cover;
-  filter: grayscale(80%);
-//  animation: hue linear 5s infinite;
+  overflow: hidden;
+  &__content {
+    @extend %center;
+    text-align: center;
+    z-index: 10;
+    color: #121212;
+    &-title {
+      font-size: 88px;
+      font-weight: bold;
+      &:first-letter {
+        color: $green;
+      }
+    }
+    &-descr {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  } 
+  &__arrow{
+    position: absolute;
+    align-content: space-between;
+    width: 50px;
+    height: 50px;
+    border-bottom: 4px solid $green;
+    border-right: 4px solid #000;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.4s all;
+    &:hover{
+      border-bottom-color:#000;
+      border-right-color: $green;
+      
+    }
+  }
+  //  animation: hue linear 5s infinite;
 }
 
 //@keyframes hue {
