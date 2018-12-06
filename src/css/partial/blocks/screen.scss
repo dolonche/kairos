@@ -21,6 +21,7 @@
     width: 100%;
     bottom: 60px;
     margin-top: 200px;
+    margin-bottom: 80px;
     &-item {
       background-color: rgba(255, 255, 255, 0.9);
       height: 200px;
@@ -113,6 +114,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    font-weight: 400;
     &-title {
       color: #0A1332;
       font-size: 27px;
@@ -199,9 +201,113 @@
       border-right-color: $green;
 
     }
-  } //  animation: hue linear 5s infinite;
-}
+  }
+  &--1 {
+    background-image: url(../img/screen-green.jpg);
 
+    .screen {
+      &__news {
+        background-color: rgba(204, 204, 204, 0.7);
+        .screen__news-list-item-descr {
+          color: #000;
+        }
+      }
+      &__widget {
+        &-item {
+          background-color: rgba(204, 204, 204, 0.75);
+        }
+      }
+      &__content {
+        background-color: transparent;
+        color: #000;
+        &-img {
+          img {
+            width: 300px;
+          }
+        }
+        &-title {
+          font-size: 60px;
+        }
+        &-descr {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  &--2 {
+    background-image: url(../img/screen-green.jpg);
+
+    .screen {
+      &__news {
+        background-color: rgba(0, 0, 0, 0.7);
+        &-list-item {
+          box-shadow: 0 0px 1px #fff;
+        }
+        &-title {
+          color: #fff;
+        }
+        .screen__news-list-item-date {
+          color: #fff;
+          opacity: 0.75;
+        }
+        .screen__news-list-item-descr {
+          color: #fff;
+        }
+      }
+      &__widget {
+        &-item {
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+      }
+      &__content {
+        background-color: transparent;
+        color: #000;
+        &-img {
+          img {
+            width: 300px;
+          }
+        }
+        &-title {
+          font-size: 60px;
+        }
+        &-descr {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  &--3 {
+    background-image: url(../img/imroomanian.jpg);
+    .screen {
+      &__news {
+        background-color: rgba(255, 255, 255, 0.9);
+        .screen__news-list-item-descr {
+          color: #000;
+        }
+      }
+      &__widget {
+        &-item {
+          background-color: rgba(255, 255, 255, 0.9);
+        }
+      }
+      &__content {
+        background-color: transparent;
+        color: #000;
+        &-img {
+          img {
+            width: 300px;
+          }
+        }
+        &-title {
+          font-size: 60px;
+        }
+        &-descr {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+} //  animation: hue linear 5s infinite;
 //@keyframes hue {
 //  0%,
 //  100% {
@@ -212,3 +318,30 @@
 //    filter: hue-rotate(60deg)
 //  }
 //}
+.page--1 {
+  .page-header {
+    background-color: #000;
+    &__button {
+      &-inner {
+        background-color: #fff;
+        &::before,
+        &::after {
+          background-color: #fff;
+        }
+      }
+      &--opened {
+        .page-header__button-inner {
+          background-color: transparent;
+        }
+      }
+    }
+    .main-nav {
+      a {
+        color: #fff;
+        &::after {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
