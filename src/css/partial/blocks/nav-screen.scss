@@ -1,18 +1,26 @@
-.main-nav {
-  flex-grow: 2;
-  display: flex;
-  padding-top: 15px;
-  padding-bottom: 15px;
+.nav-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
   box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s opacity;
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 100%;
     &-item {
       text-align: center;
       flex-grow: 2;
@@ -20,9 +28,9 @@
       a {
         text-decoration: none;
         text-transform: uppercase;
-        color: #000;
+        color: #fff;
         font-weight: bold;
-        font-size: 21px;
+        font-size: 24px;
         position: relative;
         overflow-y: hidden;
         margin-left: auto;
@@ -34,8 +42,8 @@
           content: "";
           position: absolute;
           left: 0;
-          top: 32px;
-          background-color: #091234;
+          top: 35px;
+          background-color: #fff;
           height: 4px;
           width: 100%;
           transition: 0.4s all;
