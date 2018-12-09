@@ -86,3 +86,19 @@
     }
   }
 }
+@media (max-width: 1410px){
+  .team{
+    &__list{
+      &-item{
+        flex-grow: 2;
+        &:nth-of-type(3n){
+          margin-right: auto;
+        }
+        &:nth-of-type(2n){
+          margin-right: 0;
+        }
+        
+      }
+    }
+  }
+}

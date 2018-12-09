@@ -177,7 +177,7 @@
         left: 0;
         top: 0;
         transform: translateY(-100%);
-        transition: 0.4s all;
+        transition: 0.6s all;
       }
       &::after {
         position: absolute;
@@ -189,7 +189,7 @@
         left: 0;
         top: 0;
         transform: translateY(100%);
-        transition: 0.4s all;
+        transition: 0.6s all;
       }
       &:hover {
         color: #fff;
