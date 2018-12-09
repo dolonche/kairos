@@ -7,7 +7,7 @@
   position: relative;
   overflow: hidden;
   background-size: cover;
-  background-image: url(../img/screen-3.jpg);
+  background-image: url(../img/screen-green.jpg);
   display: flex;
   flex-wrap: wrap;
   &__widget {
@@ -23,7 +23,7 @@
     margin-top: 200px;
     margin-bottom: 80px;
     &-item {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(0, 0, 0, 0.7);
       height: 200px;
       flex-grow: 2;
       margin-right: 50px;
@@ -42,17 +42,18 @@
     text-align: left;
     transform: translate(0, 0);
     max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: transparent;
+    color: #000;
     padding: 20px;
     &-img {
       margin-bottom: 20px;
       img {
-        width: 400px;
+        width: 300px;
         height: auto;
       }
     }
     &-title {
-      font-size: 40px;
+      font-size: 60px;
       font-weight: bold;
       &:first-letter {
         color: $green;
@@ -64,7 +65,7 @@
       font-weight: 400;
       line-height: 34px;
       margin-bottom: 20px;
-      font-size: 24px;
+      font-size: 20px;
     }
     &-more {
       position: relative;
@@ -106,7 +107,7 @@
   }
   &__news {
     width: 30%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     margin-left: auto;
     margin-top: 40px;
     margin-bottom: auto;
@@ -116,7 +117,7 @@
     padding: 10px;
     font-weight: 400;
     &-title {
-      color: #0A1332;
+      color: #fff;
       font-size: 27px;
       margin-bottom: 12px;
       transition: 0.4s all;
@@ -129,7 +130,7 @@
     &-list {
       &-item {
         cursor: pointer;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0px 1px #fff;
         box-sizing: border-box;
         padding: 10px;
         padding-top: 10px;
@@ -165,12 +166,12 @@
         &-descr {
           margin-top: 10px;
           margin-bottom: 0;
-          color: #404040;
+          color: #fff;
         }
         &-date {
-          color: rgba(0, 0, 0, .2);
-          opacity: 0.8;
           margin-top: 5px;
+          color: #fff;
+          opacity: 0.75;
         }
       }
     }
@@ -202,111 +203,6 @@
 
     }
   }
-  &--1 {
-    background-image: url(../img/screen-green.jpg);
-
-    .screen {
-      &__news {
-        background-color: rgba(204, 204, 204, 0.7);
-        .screen__news-list-item-descr {
-          color: #000;
-        }
-      }
-      &__widget {
-        &-item {
-          background-color: rgba(204, 204, 204, 0.75);
-        }
-      }
-      &__content {
-        background-color: transparent;
-        color: #000;
-        &-img {
-          img {
-            width: 300px;
-          }
-        }
-        &-title {
-          font-size: 60px;
-        }
-        &-descr {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-  &--2 {
-    background-image: url(../img/screen-green.jpg);
-
-    .screen {
-      &__news {
-        background-color: rgba(0, 0, 0, 0.7);
-        &-list-item {
-          box-shadow: 0 0px 1px #fff;
-        }
-        &-title {
-          color: #fff;
-        }
-        .screen__news-list-item-date {
-          color: #fff;
-          opacity: 0.75;
-        }
-        .screen__news-list-item-descr {
-          color: #fff;
-        }
-      }
-      &__widget {
-        &-item {
-          background-color: rgba(0, 0, 0, 0.7);
-        }
-      }
-      &__content {
-        background-color: transparent;
-        color: #000;
-        &-img {
-          img {
-            width: 300px;
-          }
-        }
-        &-title {
-          font-size: 60px;
-        }
-        &-descr {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-  &--3 {
-    background-image: url(../img/imroomanian.jpg);
-    .screen {
-      &__news {
-        background-color: rgba(255, 255, 255, 0.9);
-        .screen__news-list-item-descr {
-          color: #000;
-        }
-      }
-      &__widget {
-        &-item {
-          background-color: rgba(255, 255, 255, 0.9);
-        }
-      }
-      &__content {
-        background-color: transparent;
-        color: #000;
-        &-img {
-          img {
-            width: 300px;
-          }
-        }
-        &-title {
-          font-size: 60px;
-        }
-        &-descr {
-          font-size: 20px;
-        }
-      }
-    }
-  }
 } //  animation: hue linear 5s infinite;
 //@keyframes hue {
 //  0%,
@@ -318,30 +214,3 @@
 //    filter: hue-rotate(60deg)
 //  }
 //}
-.page--1 {
-  .page-header {
-    background-color: #000;
-    &__button {
-      &-inner {
-        background-color: #fff;
-        &::before,
-        &::after {
-          background-color: #fff;
-        }
-      }
-      &--opened {
-        .page-header__button-inner {
-          background-color: transparent;
-        }
-      }
-    }
-    .main-nav {
-      a {
-        color: #fff;
-        &::after {
-          background-color: #fff;
-        }
-      }
-    }
-  }
-}

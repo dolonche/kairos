@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body class="page page--1">
+  //= include/header.html
+  <div class="title-section">
+    <div class="title-section__content">
+      <a href="" class="title-section__content-logo"><img src="img/logo-demo.svg" alt=""></a>
+      <div class="title-section__content-title">Kairos finance</div>
+      <!--      <div class="title-section__content-category">About us</div>-->
+    </div>
+  </div>
+  <div class="about-us">
+    <div class="about-us__item">
+      <div class="about-us__item-left">We seek to deliver highest levels of customer service, by working closely with our clients</div>
+      <div class="about-us__item-right">Professional Structured Investments (PSI) Fund was incorporated in the Cayman Islands in September 2015 as a closed-ended fund with the investment objective of providing returns through a combination of current income and capital appreciation.</div>
+    </div>
+    <div class="about-us__item">
+      <div class="about-us__item-left">Interests of our unique team of professionals are aligned with those of our stakeholders
+      </div>
+      <div class="about-us__item-right">The Fund is investing most of its assets in debt (including distressed debt) and private equity of leading companies in the former USSR republics in such industries as real estate, timber, hospitality and manufacturing industries, to name a few.
+      </div>
+    </div>
+    <div class="about-us__item">
+      <div class="about-us__item-left">
+        We are passionate about our work and always focused on delivering best returns for our customers
+      </div>
+      <div class="about-us__item-right">Based on a unique team of experienced managers, in depth industry knowledge and professionalism of the investment advisors, the Fund generates valuable returns for its investors.</div>
+    </div>
+    <a class="about-us__link" href="team.html">Our team</a>
+  </div>
+  //= include/footer.html
+  <!-- body -->
+  <div class="overlay"></div>
+  <nav class="nav-screen">
+    <ul class="nav-screen__list">
+      <li class="nav-screen__list-item"><a href="about-us.html">About us</a></li>
+      <li class="nav-screen__list-item"><a href="">Team</a></li>
+      <li class="nav-screen__list-item"><a href="">Key repotrs</a></li>
+      <li class="nav-screen__list-item"><a href="contacts.html">Contacts</a></li>
+    </ul>
+  </nav>
+  <div class="language"><a href="" class="language__link">EN</a><a href="" class="language__link">RU</a></div>
+  <script>
+    'use strict';
+    var navButton = document.querySelector('.page-header__button');
+    var logo = document.querySelector('.page-header__logo-img');
+    var nav = document.querySelector('.nav-screen');
+    var overlay = document.querySelector('.overlay');
+    var language = document.querySelector('.language');
+    navButton.addEventListener('click', function(e) {
+      console.log(e.target.classList);
+      if ((e.target.classList.contains('page-header__button--opened') && e.target.classList.length === 2) || (e.target.parentNode.classList.contains('page-header__button--opened')) && e.target.parentNode.classList.length === 2) {
+        navButton.classList.remove('page-header__button--opened');
+        overlay.classList.remove('overlay--open');
+        nav.classList.remove('nav-screen--open');
+        language.classList.remove('language--open');
+        logo.src = ('img/logo.svg');
+      } else {
+        if ((e.target.classList.contains('page-header__button') && e.target.classList.length === 1) || (e.target.parentNode.classList.contains('page-header__button')) && e.target.parentNode.classList.length === 1) {
+          navButton.classList.add('page-header__button--opened');
+          overlay.classList.add('overlay--open');
+          nav.classList.add('nav-screen--open');
+          language.classList.add('language--open');
+          logo.src = ('img/logo-open.svg');
+        }
+      }
+    })
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 27 && navButton.classList.contains('page-header__button--opened')) {
+        navButton.classList.remove('page-header__button--opened');
+        overlay.classList.remove('overlay--open');
+        nav.classList.remove('nav-screen--open');
+        language.classList.remove('language--open');
+        logo.src = ('img/logo.svg');
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
   padding-bottom: 8px;
   display: flex;
   justify-content: space-between;
-  background-color: #FDFDFB;
+    background-color: #000;
   overflow-y: hidden;
   &__logo {
     &-img {
@@ -25,7 +25,7 @@
       display: block;
       width: 22px;
       height: 3px;
-      background-color: #000;
+      background-color: #fff;
       margin-top: auto;
       margin-bottom: auto;
       transition: 0.4s all;
@@ -33,7 +33,7 @@
       &::after {
         content: "";
         position: absolute;
-        background-color: #000;
+        background-color: #fff;
         width: 22px;
         height: 3px;
         left: 0;

@@ -1,0 +1,26 @@
+.toggle .tabs {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 40px;
+}
+.toggle .tabs .tab {
+  color: #777777;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: 0.4s all;
+  font-size: 18px;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+.toggle .tabs .tab.active {
+  color: $green;
+  border-bottom: 3px solid $green;
+}
+.toggle .panels .panel {
+  display: none;
+}
+.toggle .panels .panel:first-child {
+  display: block;
+}

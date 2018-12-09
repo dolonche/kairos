@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body class="page page--1">
+  <div class="page-header__wrapper">
+    <header class="page-header">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item"><a href="">About us</a></li>
+          <li class="main-nav__list-item"><a href="">Team</a></li>
+          <li class="main-nav__list-item"><a href="">Key repotrs</a></li>
+          <li class="main-nav__list-item"><a href="">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="page-header__button"><span class="page-header__button-inner"></div>
+    </header>
+  </div>
+  <div class="title-section">
+    <div class="title-section__content">
+      <a href="" class="title-section__content-logo"><img src="img/logo-demo.svg" alt=""></a>
+      <div class="title-section__content-title">Kairos finance</div>
+      <!--      <div class="title-section__content-category">About us</div>-->
+    </div>
+  </div>
+  <div class="contacts">
+    <div class="contacts__content">
+      <div class="contacts__content-item">
+        <div class="contacts__content-item-title">Contact address</div>
+        <div class="contacts__content-item-descr"> A.B.C. GRANDESERVUS LIMITED Dimokritou 15, Panaretos Eliana Complex Office 104, Potamos Germasogeias P.C. 4041 Limassol, Cyprus
+        </div>
+      </div>
+      <div class="contacts__content-item">
+        <div class="contacts__content-item-title">Phone</div>
+        <div class="contacts__content-item-descr">+357 25 028505
+        </div>
+      </div>
+      <div class="contacts__content-item">
+        <div class="contacts__content-item-title">Fax</div>
+        <div class="contacts__content-item-descr">+357 25 028504
+        </div>
+      </div>
+      <div class="contacts__content-item">
+        <div class="contacts__content-item-title">Mail</div>
+        <div class="contacts__content-item-descr"><a href="mailto:mail@psinvestment.com">mail@psinvestment.com</a>
+        </div>
+      </div>
+      <div class="contacts__content-item">
+        <div class="contacts__content-item-title">Legal address</div>
+        <div class="contacts__content-item-descr"> Solaris Corporate Services Ltd., P.O. Box 1990, 3rd Floor, FirstCaribbean House, George Town, Grand Cayman KY1-1104, Cayman Islands
+        </div>
+      </div>
+    </div>
+    <form class="contacts__form">
+      <div class="contacts__form-title">Send a message</div>
+      <div class="contacts__form-bunch"><input type="text" placeholder="Name*" required><input type="text" placeholder="Company"></div>
+      <div class="contacts__form-bunch"><input type="email" placeholder="Email*"><input type="text" placeholder="Phone"></div>
+      <textarea name="" id="" cols="30" rows="10" placeholder="Write message here" required></textarea><button type="submit">Send</button>
+    </form>
+  </div>
+  <div class="page-footer__wrapper">
+    <footer class="page-footer">
+      © COPYRIGHT 2018 Kairos finance Fund, ALL RIGHTS RESERVED
+    </footer>
+  </div>
+  <!-- body -->
+  <div class="overlay"></div>
+  <nav class="nav-screen">
+    <ul class="nav-screen__list">
+      <li class="nav-screen__list-item"><a href="about-us.html">About us</a></li>
+      <li class="nav-screen__list-item"><a href="">Team</a></li>
+      <li class="nav-screen__list-item"><a href="">Key repotrs</a></li>
+      <li class="nav-screen__list-item"><a href="contact.html">Contacts</a></li>
+    </ul>
+  </nav>
+  <div class="language"><a href="" class="language__link">EN</a><a href="" class="language__link">RU</a></div>
+  <script>
+    'use strict';
+    var navButton = document.querySelector('.page-header__button');
+    var logo = document.querySelector('.page-header__logo-img');
+    var nav = document.querySelector('.nav-screen');
+    var overlay = document.querySelector('.overlay');
+    var language = document.querySelector('.language');
+    navButton.addEventListener('click', function(e) {
+      console.log(e.target.classList);
+      if ((e.target.classList.contains('page-header__button--opened') && e.target.classList.length === 2) || (e.target.parentNode.classList.contains('page-header__button--opened')) && e.target.parentNode.classList.length === 2) {
+        navButton.classList.remove('page-header__button--opened');
+        overlay.classList.remove('overlay--open');
+        nav.classList.remove('nav-screen--open');
+        language.classList.remove('language--open');
+        logo.src = ('img/logo.svg');
+      } else {
+        if ((e.target.classList.contains('page-header__button') && e.target.classList.length === 1) || (e.target.parentNode.classList.contains('page-header__button')) && e.target.parentNode.classList.length === 1) {
+          navButton.classList.add('page-header__button--opened');
+          overlay.classList.add('overlay--open');
+          nav.classList.add('nav-screen--open');
+          language.classList.add('language--open');
+          logo.src = ('img/logo-open.svg');
+        }
+      }
+    })
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 27 && navButton.classList.contains('page-header__button--opened')) {
+        navButton.classList.remove('page-header__button--opened');
+        overlay.classList.remove('overlay--open');
+        nav.classList.remove('nav-screen--open');
+        language.classList.remove('language--open');
+        logo.src = ('img/logo.svg');
+      }
+    })
+  </script>
+</body>
+
+</html>
