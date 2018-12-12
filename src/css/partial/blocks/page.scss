@@ -1,5 +1,11 @@
 .page {
-  overflow-x: scroll;
+  overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   min-width: 1200px;
+}
+
+@media (max-width: 1200px) {
+  .page {
+    overflow-x: scroll;
+  }
 }
