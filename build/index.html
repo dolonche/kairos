@@ -28,11 +28,23 @@
         <div class="screen__content-img"><img src="img/logo-demo.svg" alt=""></div>
         <div class="screen__content-title">Kairos finance</div>
         <div class="screen__content-descr">We are passionate about our work and always focused on delivering best returns for our investors. We seek to deliver highest levels of customer service, by working closely with our clients</div>
-        <a href="" class="screen__content-more">Read more</a>
+        <a href="about-us.html" class="screen__content-more">Read more</a>
       </div>
       <div class="screen__news">
         <div class="screen__news-title">News</div>
         <div class="screen__news-list">
+          <div class="screen__news-list-item">
+            <div class="screen__news-list-item-date">24.10.18</div>
+            <p class="screen__news-list-item-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum hic quia eaque provident officiis quae illum aperiam! Nostrum.</p>
+          </div>
+          <div class="screen__news-list-item">
+            <div class="screen__news-list-item-date">24.10.18</div>
+            <p class="screen__news-list-item-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum hic quia eaque provident officiis quae illum aperiam! Nostrum.</p>
+          </div>
+          <div class="screen__news-list-item">
+            <div class="screen__news-list-item-date">24.10.18</div>
+            <p class="screen__news-list-item-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum hic quia eaque provident officiis quae illum aperiam! Nostrum.</p>
+          </div>
           <div class="screen__news-list-item">
             <div class="screen__news-list-item-date">24.10.18</div>
             <p class="screen__news-list-item-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum hic quia eaque provident officiis quae illum aperiam! Nostrum.</p>
@@ -115,53 +127,53 @@
       </div>
     </div>
   </div>
-  
-    <!-- body -->
-    <div class="overlay"></div>
+
+  <!-- body -->
+  <div class="overlay"></div>
     <nav class="nav-screen">
       <ul class="nav-screen__list">
-        <li class="nav-screen__list-item"><a href="">About us</a></li>
-        <li class="nav-screen__list-item"><a href="">Team</a></li>
-        <li class="nav-screen__list-item"><a href="">Key repotrs</a></li>
-        <li class="nav-screen__list-item"><a href="">Contacts</a></li>
+        <li class="nav-screen__list-item"><a href="about-us.html">About us</a></li>
+        <li class="nav-screen__list-item"><a href="team.html">Team</a></li>
+        <li class="nav-screen__list-item"><a href="reports.html">Key repotrs</a></li>
+        <li class="nav-screen__list-item"><a href="contacts.html">Contacts</a></li>
       </ul>
     </nav>
-    <div class="language"><a href="" class="language__link">EN</a><a href="" class="language__link">RU</a></div>
-    <script>
-      'use strict';
-      var navButton = document.querySelector('.page-header__button');
-      var logo = document.querySelector('.page-header__logo-img');
-      var nav = document.querySelector('.nav-screen');
-      var overlay = document.querySelector('.overlay');
-      var language = document.querySelector('.language');
-      navButton.addEventListener('click', function(e) {
-        console.log(e.target.classList);
-        if ((e.target.classList.contains('page-header__button--opened') && e.target.classList.length === 2) || (e.target.parentNode.classList.contains('page-header__button--opened')) && e.target.parentNode.classList.length === 2) {
-          navButton.classList.remove('page-header__button--opened');
-          overlay.classList.remove('overlay--open');
-          nav.classList.remove('nav-screen--open');
-          language.classList.remove('language--open');
-          logo.src = ('img/logo.svg');
-        } else {
-          if ((e.target.classList.contains('page-header__button') && e.target.classList.length === 1) || (e.target.parentNode.classList.contains('page-header__button')) && e.target.parentNode.classList.length === 1) {
-            navButton.classList.add('page-header__button--opened');
-            overlay.classList.add('overlay--open');
-            nav.classList.add('nav-screen--open');
-            language.classList.add('language--open');
-            logo.src = ('img/logo-open.svg');
-          }
+  <div class="language"><a href="" class="language__link">EN</a><a href="" class="language__link">RU</a></div>
+  <script>
+    'use strict';
+    var navButton = document.querySelector('.page-header__button');
+    var logo = document.querySelector('.page-header__logo-img');
+    var nav = document.querySelector('.nav-screen');
+    var overlay = document.querySelector('.overlay');
+    var language = document.querySelector('.language');
+    navButton.addEventListener('click', function(e) {
+      console.log(e.target.classList);
+      if ((e.target.classList.contains('page-header__button--opened') && e.target.classList.length === 2) || (e.target.parentNode.classList.contains('page-header__button--opened')) && e.target.parentNode.classList.length === 2) {
+        navButton.classList.remove('page-header__button--opened');
+        overlay.classList.remove('overlay--open');
+        nav.classList.remove('nav-screen--open');
+        language.classList.remove('language--open');
+        logo.src = ('img/logo.svg');
+      } else {
+        if ((e.target.classList.contains('page-header__button') && e.target.classList.length === 1) || (e.target.parentNode.classList.contains('page-header__button')) && e.target.parentNode.classList.length === 1) {
+          navButton.classList.add('page-header__button--opened');
+          overlay.classList.add('overlay--open');
+          nav.classList.add('nav-screen--open');
+          language.classList.add('language--open');
+          logo.src = ('img/logo-open.svg');
         }
-      })
-      document.addEventListener('keydown', function(e) {
-        if (e.keyCode === 27 && navButton.classList.contains('page-header__button--opened')) {
-          navButton.classList.remove('page-header__button--opened');
-          overlay.classList.remove('overlay--open');
-          nav.classList.remove('nav-screen--open');
-          language.classList.remove('language--open');
-          logo.src = ('img/logo.svg');
-        }
-      })
-    </script>
+      }
+    })
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 27 && navButton.classList.contains('page-header__button--opened')) {
+        navButton.classList.remove('page-header__button--opened');
+        overlay.classList.remove('overlay--open');
+        nav.classList.remove('nav-screen--open');
+        language.classList.remove('language--open');
+        logo.src = ('img/logo.svg');
+      }
+    })
+  </script>
 </body>
 
 </html>

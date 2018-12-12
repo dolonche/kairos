@@ -6,7 +6,8 @@
   padding-bottom: 8px;
   display: flex;
   justify-content: space-between;
-    background-color: #000;
+  background-color: #000;
+  min-width: 1200px;
   overflow-y: hidden;
   &__logo {
     &-img {

@@ -1,43 +1,46 @@
 $text-color: #000000;
 $green: #00B381;
 @mixin font($font-size: 16px, $line-height: 24px, $font-weight: 400, $color: $text-color) {
-	font-size: $font-size;
-	line-height: $line-height;
-	font-weight: $font-weight;
-	color: $color;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
 }
 
 %clearfix {
-	&::after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
-%center{
+%center {
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 %container {
-	width: 1200px;
-	margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
   @media #{$tablet-widths} {
-		width: 768px;
-	}
+    width: 768px;
+  }
   @media #{$mobile-widths} {
-		width: 320px;
-	}
+    width: 320px;
+  }
 }
+
 %container-l {
-	max-width: 1920px;
-	margin: 0 auto;
-  @media #{$tablet-widths} {
-		width: 768px;
-	}
-  @media #{$mobile-widths} {
-		width: 320px;
-	}
+  max-width: 1920px;
+  min-width: 1200px;
+  margin: 0 auto;
+  //  @media #{$tablet-widths} {
+  //		width: 768px;
+  //	}
+  //  @media #{$mobile-widths} {
+  //		width: 320px;
+  //	}
 }
