@@ -127,7 +127,6 @@
   <script>
     'use strict';
     var disclaimerLink = document.querySelectorAll('.disclaimer');
-    console.log(disclaimerLink.length);
     var disclaimerPopup = document.querySelector('.popup-disclaimer');
     var overlay = document.querySelector('.overlay');
     for (var i = 0; i < disclaimerLink.length; i++) {
@@ -138,9 +137,10 @@
       })
     }
     disclaimerPopup.addEventListener('click', function(e) {
-      if (e.target.classList.contains('popup-disclaimer__bunch-button') || e.target.classList.contains('popup-disclaimer__close'))
+      if (e.target.classList.contains('popup-disclaimer__bunch-button') || e.target.classList.contains('popup-disclaimer__close')) {
         overlay.classList.remove('overlay--max');
-      disclaimerPopup.classList.remove('popup-disclaimer--open');
+        disclaimerPopup.classList.remove('popup-disclaimer--open');
+      }
     })
     document.addEventListener('keydown', function(e) {
       if (e.keyCode === 27 && disclaimerPopup.classList.contains('popup-disclaimer--open')) {
