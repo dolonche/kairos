@@ -158,22 +158,22 @@
     var teamPopupDescr = teamPopup.querySelector('.popup-team__descr');
     teamList.addEventListener('click', function(e) {
       if (e.target.classList.contains('team__list-item-descr-more')) {
-        overlay.classList.add('overlay--open');
+        overlay.classList.add('overlay--max');
         teamPopup.classList.add('popup-team--open');
         teamPopupName.textContent = e.target.parentNode.querySelector('.team__list-item-descr-name').textContent;
         teamPopupDescr.textContent = e.target.parentNode.querySelector('.team__list-item-descr-hidden').textContent;
       }
     })
     document.addEventListener('click', function(e) {
-      if ((e.target.classList.contains('overlay--open') || e.target.classList.contains('popup-team__close')) && teamPopup.classList.contains('popup-team--open')) {
+      if ((e.target.classList.contains('overlay--max') || e.target.classList.contains('popup-team__close')) && teamPopup.classList.contains('popup-team--open')) {
         teamPopup.classList.remove('popup-team--open');
-        overlay.classList.remove('overlay--open');
+        overlay.classList.remove('overlay--max');
       }
     })
     document.addEventListener('keydown', function(e) {
       if (e.keyCode === 27 && teamPopup.classList.contains('popup-team--open')) {
         teamPopup.classList.remove('popup-team--open');
-        overlay.classList.remove('overlay--open');
+        overlay.classList.remove('overlay--max');
       }
     })
   </script>
