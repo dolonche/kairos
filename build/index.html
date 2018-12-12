@@ -15,7 +15,7 @@
         <ul class="main-nav__list">
           <li class="main-nav__list-item"><a href="about-us.html">About us</a></li>
           <li class="main-nav__list-item"><a href="team.html">Team</a></li>
-          <li class="main-nav__list-item"><a href="reports.html">Key repotrs</a></li>
+          <li class="main-nav__list-item"><a href="reports.html" class="disclaimer">Key repotrs</a></li>
           <li class="main-nav__list-item"><a href="contacts.html">Contacts</a></li>
         </ul>
       </nav>
@@ -130,15 +130,81 @@
 
   <!-- body -->
   <div class="overlay"></div>
+  <div class="popup-disclaimer">
+    <div class="popup-disclaimer__close"></div>
+    <div class="popup-disclaimer__title">Disclaimer</div>
+    <div class="popup-disclaimer__content"><b>PLEASE READ CAREFULLY THE FOLLOWING TERMS AND CONDITIONS.</b> <b>BY ACCESSING THIS SITE AND THE INFORMATION CONTAINED HEREIN, YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS BELOW. IF YOU DO NOT AGREE TO THESE TERMS AND CONDITIONS, DO NOT ACCESS THIS SITE OR ANY OF THE INFORMATION CONTAINED HEREIN.</b> <b>No Offer or Solicitation</b>
+      <p>Neither this site nor anything contained herein shall constitute an invitation or recommendation to invest or otherwise deal in, or an offer to sell or the solicitation of an offer to buy or subscribe for, any security. There shall be no sale of any securities in any jurisdiction in which such an offer, solicitation or sale would be unlawful prior to qualification under the securities laws of such state or jurisdiction. Professional advice should be sought prior to any decision to invest in covered bonds.</p> <b>Legal Considerations</b>
+      <p>The distribution material on this site may be restricted by local law of potential investors and failure to comply with such restrictions may constitute a violation of the laws of any such other jurisdiction. Persons accessing this site should inform themselves about restrictions applicable to them, and observe any such restrictions. In particular, no information contained in this site is for distribution directly or indirectly in USA, UK, EU, Australia, Canada, South Africa or Japan.</p>
+      <p>Potential investors shall carefully study any restrictions applicable to them (taking into account, among other things, that Convertible Notes are not listed at any stock exchange).</p> <b>Restricted residence of recipients</b>
+      <p>By accepting these terms and conditions you confirm that you are not incorporated, domiciled or resident in any of USA, UK, EU, Australia, Canada, South Africa, Japan.</p> <b>No Liability</b>
+      <p>The material on this site has no regard to the specific investment objectives, financial situation or particular needs of any recipient. The information is historical in nature and should not be relied on when making any investment decision. No representation or warranty, express or implied, is or will be made in relation to, the accuracy or completeness of the information on this site. No liability whatsoever is or will be accepted by Professional Structured Investments (PSI) Fund for any loss or damage howsoever arising from any use of this site or its contents.</p>
+
+    </div>
+    <div class="popup-disclaimer__bunch"><a href="reports.html" class="popup-disclaimer__bunch-link">Agree</a> <button class="popup-disclaimer__bunch-button">Disagree</button></div>
+  </div>
+  <div class="popup-news">
+    <div class="popup-news__close"></div>
+    <p class="popup__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nulla sit, dignissimos, placeat maxime aperiam! Tenetur et quidem quasi officiis, earum laborum, quos expedita optio, corporis excepturi quia. Fugiat, dolorem.</p>
+  </div>
     <nav class="nav-screen">
       <ul class="nav-screen__list">
         <li class="nav-screen__list-item"><a href="about-us.html">About us</a></li>
         <li class="nav-screen__list-item"><a href="team.html">Team</a></li>
-        <li class="nav-screen__list-item"><a href="reports.html">Key repotrs</a></li>
+        <li class="nav-screen__list-item"><a href="reports.html" class="disclaimer">Key repotrs</a></li>
         <li class="nav-screen__list-item"><a href="contacts.html">Contacts</a></li>
       </ul>
     </nav>
   <div class="language"><a href="" class="language__link">EN</a><a href="" class="language__link">RU</a></div>
+   <script>
+    'use strict';
+    var disclaimerLink = document.querySelectorAll('.disclaimer');
+    console.log(disclaimerLink.length);
+    var disclaimerPopup = document.querySelector('.popup-disclaimer');
+    var overlay = document.querySelector('.overlay');
+    for (var i = 0; i < disclaimerLink.length; i++) {
+      disclaimerLink[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        overlay.classList.add('overlay--max');
+        disclaimerPopup.classList.add('popup-disclaimer--open');
+      })
+    }
+    disclaimerPopup.addEventListener('click', function(e) {
+      if (e.target.classList.contains('popup-disclaimer__bunch-button') || e.target.classList.contains('popup-disclaimer__close'))
+        overlay.classList.remove('overlay--max');
+      disclaimerPopup.classList.remove('popup-disclaimer--open');
+    })
+        document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 27 && disclaimerPopup.classList.contains('popup-disclaimer--open')) {
+        disclaimerPopup.classList.remove('popup-disclaimer--open');
+        overlay.classList.remove('overlay--max');
+      }
+    })
+  </script>
+  <script>
+    'use strict';
+    var newsList = document.querySelector('.screen__news-list');
+    var overlay = document.querySelector('.overlay');
+    var popupNews = document.querySelector('.popup-news');
+    newsList.addEventListener('click', function(e) {
+      if (e.target.classList.contains('screen__news-list-item')) {
+        overlay.classList.add('overlay--max');
+        popupNews.classList.add('popup-news--open');
+      }
+    })
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 27 && popupNews.classList.contains('popup-news--open')) {
+        overlay.classList.remove('overlay--max');
+        popupNews.classList.remove('popup-news--open');
+      }
+    })
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('overlay--max') || e.target.classList.contains('popup-news__close')) {
+        overlay.classList.remove('overlay--max');
+        popupNews.classList.remove('popup-news--open');
+      }
+    })
+  </script>
   <script>
     'use strict';
     var navButton = document.querySelector('.page-header__button');

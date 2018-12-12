@@ -10,6 +10,32 @@
     padding-bottom: 20px;
     color: $green;
   }
+  &__partners{
+    display: flex;
+    flex-direction: column;
+    &-item{
+      width: 100%;
+      display: flex;
+      margin-bottom: 40px;
+      img{
+        width: 250px;
+        height: auto;
+        max-height: 250px; 
+        margin-right: 40px;
+        margin-bottom: auto;
+      }
+      &-descr{
+        &-title{
+          color: $green;
+          font-size: 24px;
+        }
+        &-content{
+          line-height: 26px;
+          color: #35404d;
+        }
+      }
+    }
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
