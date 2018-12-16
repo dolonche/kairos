@@ -41,6 +41,17 @@
       color: #35404d;
     }
   }
+  &__title {
+    padding-left: 23px;
+    padding-right: 23px;
+    box-sizing: border-box;
+    color: #35404d;
+    font-size: 19px;
+    &:first-letter {
+      color: $green;
+      font-weight: bold;
+    }
+  }
   &__link {
     text-decoration: none;
     font-size: 20px;
