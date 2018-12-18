@@ -10,8 +10,8 @@
   flex-wrap: wrap;
   &__content {
     margin-left: 40px;
-    margin-top: 40px;
     padding: 20px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     &-logo {
@@ -26,6 +26,17 @@
       font-weight: 700;
       margin-bottom: 20px;
       letter-spacing: 2px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: $green;
+        border-radius: 100%;
+        left: 77px;
+        top: 10px;
+      }
       &:first-letter {
         color: $green;
       }
