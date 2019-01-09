@@ -23,7 +23,9 @@
         <div class="screen__news-list">
           <div class="screen__news-list-item">
             <div class="screen__news-list-item-date">24.10.18</div>
-            <p class="screen__news-list-item-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum hic quia eaque provident officiis quae illum aperiam! Nostrum.</p>
+            <p class="screen__news-list-item-descr">Создание группы Kairos</p>
+            <p class="screen__news-list-item-hidden">
+              Группа Kairos была создана в 2018 году для инвестиции в ценные бумаги и управления инвестиционными портфелями. Полноценный запуск инвестиционного бизнеса Группы ожидается в первой половине 2019 года.</p>
           </div>
           <div class="screen__news-list-item">
             <div class="screen__news-list-item-date">24.10.18</div>
@@ -176,6 +178,7 @@
       if (e.target.classList.contains('screen__news-list-item')) {
         overlay.classList.add('overlay--max');
         popupNews.classList.add('popup-news--open');
+        popupNews.querySelector('.popup__descr').textContent = e.target.querySelector('.screen__news-list-item-hidden').textContent;
       }
     })
     document.addEventListener('keydown', function(e) {
@@ -185,7 +188,7 @@
       }
     })
     document.addEventListener('click', function(e) {
-      if (e.target.classList.contains('overlay--max') || e.target.classList.contains('popup-news__close')) {
+      if ((e.target.classList.contains('overlay--max') || e.target.classList.contains('popup-news__close')) && !document.querySelector('.popup-disclaimer').classList.contains('popup-disclaimer--open')) {
         overlay.classList.remove('overlay--max');
         popupNews.classList.remove('popup-news--open');
       }
